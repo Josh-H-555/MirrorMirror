@@ -42,7 +42,8 @@
                             <a class="nav-link" href="code.html">The Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                            <a class="nav-link" target="_blank" href="https://github.com/Josh-H-555/MirrorMirror">Git
+                                Repo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" target="_blank" href="#">About Me</a>
@@ -53,10 +54,37 @@
         </nav>
 
         <main class="flex-shrink-0">
-            <div class="container">
-                <h1 class="mt-5">Template with dark fixed navbar and sticky footer</h1>
-                <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and
-                    CSS. A fixed navbar has been added with padding-top: 60px; on the main > .container.</p>
+            <div class="container mt-5">
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col">
+                        <h1 class="display-5 fw-bold lh-1 mb-3">Mirror Mirror: Reflect</h1>
+                        <h4 class="lead pb-2">
+                            A Javascript coding exercise that will
+                            reverse a given string.
+                        </h4>
+                    </div>
+                    <div class="col mt-2">
+                        <h5 class="border-1 border-bottom border-danger pb-1">
+                            Enter a string to reverse:
+                        </h5>
+                        <form action="" class="row gx-3 gy-2">
+                            <div class="col">
+                                <input type="text" id="userString" class="form-control" placeholder="Enter a String"
+                                    aria-label="Enter a String">
+                            </div>
+                            <div class="col-12">
+                                <!-- use type=button for event listeners. submit is a POST request -->
+                                <button type="button" id="btnSubmit" class="btn btn-danger">Reverse It!</button>
+                            </div>
+                            <div class="alert alert-danger mt-5 invisible fade show" id="alert" role="alert">
+                                <h4 class="alert-heading">Magic!</h4>
+                                <p class="mb-0" id="msg">
+                                    <!-- message is inserted here -->
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </main>
 

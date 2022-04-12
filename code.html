@@ -43,7 +43,8 @@
                             <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                            <a class="nav-link" target="_blank" href="https://github.com/Josh-H-555/MirrorMirror">Git
+                                Repo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" target="_blank" href="#">About Me</a>
@@ -60,6 +61,45 @@
                     <div class="col-md-8">
                         <pre class="line-numbers">
                             <code class="language-javascript">
+                                //Event Listener Instantiation
+                                document.getElementById("btnSubmit").addEventListener("click", getValues);
+
+                                //get values from site
+                                function getValues() {
+
+                                    document.getElementById("alert").classList.add("invisible");
+
+
+                                    //don't forget to set it equal to the element's VALUE
+                                    let givenString = document.getElementById("userString").value;
+
+                                    let reversedString = reverseString(givenString);
+
+                                    displayMirror(reversedString);
+                                }
+
+
+                                //generate the reversed string
+                                function reverseString(originalString) {
+
+                                    let reversedString = "";
+
+                                    for (let i = originalString.length - 1; i >= 0; --i) {
+                                        reversedString += originalString[i];
+                                    }
+
+                                    return reversedString;
+                                }
+
+                                //display the string
+                                function displayMirror(reversedString) {
+
+                                    paragraph = document.getElementById("msg");
+
+                                    paragraph.innerHTML += `Here is your reversed string: ${reversedString}`;
+
+                                    document.getElementById("alert").classList.remove("invisible");
+                                }
                             </code>
                         </pre>
                     </div>
@@ -74,19 +114,24 @@
                         <p>Mirror Mirror will take a given string, and output the reverse of it.
                             <br>
                             <br>
-                            <strong>function 1</strong>
+                            <strong>getValues</strong>
                             <br>
-                            function 1 purpose
-                            <br>
-                            <br>
-                            <strong>function 2</strong>
-                            <br>
-                            function 2 purpose
+                            Ensures the alert is invisible by adding to the classList. Then,
+                            receives the text value from the user, then calls the reverseString
+                            and displayMirror functions.
                             <br>
                             <br>
-                            <strong>function 3</strong>
+                            <strong>reverseString</strong>
                             <br>
-                            function 3 purpose
+                            Iterates backward through the originalString given, and adds the element
+                            in a backwards order into the reversedString.
+                            <br>
+                            <br>
+                            <strong>displayMirror</strong>
+                            <br>
+                            Gets the paragraph element that we'll be writing to.
+                            Writes the reversedString into the innerHTML,
+                            and reveals the alert using the classList.remove function.
                         </p>
                     </div>
                 </div>
